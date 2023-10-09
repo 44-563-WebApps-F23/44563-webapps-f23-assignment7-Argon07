@@ -7,13 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color:  #d4d4d4;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #52d8f0;
+            background-color: #122325;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -23,7 +23,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #46a3a0;
+            background-color: #052221;
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -50,13 +50,42 @@
 
     /* Styling for the "Click for help" paragraph */
     .help {
-        background-color: #007bff;
-        color: #fff;
+        background-color: #00000000;
+        color: #ffffff;
+        
+        font-weight: bold;
         cursor: pointer;
         text-align: center;
         transition: background-color 0.3s;
     }
 
+    .image-container {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content:center;
+            
+        }
+
+        .image-container > div {
+            flex: 0 0 calc(20% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            justify-content: center;
+            
+        }
+
+        .image-container img {
+            width: 40%;
+            height: auto;
+            
+            
+        }
     </style>
 </head>
 <body>
@@ -69,6 +98,94 @@
         <p class="info" id="penalty">Penalty is zero.</p>
         <p class="help">Click for help.</p>
         <p class="help" id="help">Help report</p>
+
+        <div class="image-container">
+            <div class="row">
+              <div>
+                <img src="startImage.jpg" alt="startImage" width="50" height="50"/>
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div class="two wide column">
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" />
+              </div>
+            </div>
+          </div>
     
 </body>
 </html>
