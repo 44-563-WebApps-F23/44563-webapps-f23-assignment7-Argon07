@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Merging Items</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(0, 0, 0);
+    }
+
+    .flex-container>div {
+      background-color: wheat;
+      color: black;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+    }
+
+    .merger {
+      background-color: yellow;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column;
+        background-color: green;
+      }
+    }
+
+    /* Style for buttons */
+    button {
+      background-color: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    body {
+        background-color: antiquewhite;
+        align-items: center;
+        align-content: center;
+    }
+    #newItem {
+      width: 200px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><center>Agraja builds a merger</center></h1>
+  <div class="flex-container" id="target">
+    <div class="merger">row item 1</div>
+    <div class="merger">row item 2</div>
+    <div class="merger">row item 3</div>
+  </div>
+
+  <p>Press the button to create a new element of type div and then add it to the container.</p>
+  <input type="text" id="newItem" placeholder="Enter item text"><br><br>
+  <button onclick="addAtEnd()">Add end</button>
+  <button onclick="addAtFront()">Add front</button>
+  <button onclick="remove()">Remove</button>
+</body>
+
+<script>
+  function remove() {
+    // Get all elements with class "merger"
+    let mergerItems = document.getElementsByClassName("merger");
+
+    // Check if there are elements to remove
+    if (mergerItems.length > 0) {
+      // Find the middle index
+      let middleIndex = Math.floor(mergerItems.length / 2);
+
+      // Remove the middle element from the flex container
+      let container = document.getElementById('target');
+      container.removeChild(mergerItems[middleIndex]);
+    }
+  }
+
+  function addAtFront() {
+    // Get the value from the input element
+    let newItemText = document.getElementById('newItem').value;
+
+    if (newItemText.trim() === "") {
+      alert("Please enter an item text.");
+      return;
+    }
+
+    // Create a new div element
+    let element = document.createElement("div");
+    element.innerHTML = newItemText;
+    element.className = "merger";
+
+    // Get the container div
+    let container = document.getElementById('target');
+
+    // Add the new element to the front
+    container.insertBefore(element, container.firstChild);
+
+    // Clear the input field
+    document.getElementById('newItem').value = "";
+  }
+
+  function addAtEnd() {
+    // Get the value from the input element
+    let newItemText = document.getElementById('newItem').value;
+
+    if (newItemText.trim() === "") {
+      alert("Please enter an item text.");
+      return;
+    }
+
+    // Create a new div element
+    let element = document.createElement("div");
+    element.innerHTML = newItemText;
+    element.className = "merger";
+
+    // Add it to the container
+    let container = document.getElementById('target');
+    container.appendChild(element);
+
+    // Clear the input field
+    document.getElementById('newItem').value = "";
+  }
+</script>
+
+</html>
