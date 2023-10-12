@@ -11,40 +11,40 @@
 </head>
 <body>
 
-  <h2>Agraja speed check</h2>
-
+  <h1>Agraja speed check</h2>
+ 
   <div id="target">Your time</div>
   <div id="counter">Count</div>
   <button type="button" class="btn btn-secondary" onclick="startTime()">Start Timer</button>
-  <button type="button" class="btn btn-success" onclick="recordTime()">React</button>  
+  <button type="button" class="btn btn-success" onclick="recordTime()">React</button>
 
-  
   <script>
-  var reactTime = undefined;
+    var reactTime = undefined;
 
-   function recordTime() {
-  reactTime = Date.now();
-  console.log("reactTime:", reactTime);
-}
-function startTime() {
-            for (let i = 0; i < 9; i++) {
-                setTimeout(function(i) {
-                    return function() {
-                        document.getElementById("counter").innerHTML = i;
-                    };
-                }(i), (8 - i) * 1000);
-            }
-            
-setTimeout(function() {
-    if ( reactTime === undefined) {
-       document.getElementById("target").innerHTML = "Too Slow";
-    } else {
-       let endTime = Date.now();
-       
-        document.getElementById("target").innerHTML = "Time was " + (endTime-reactTime) ;
+    function recordTime() {
+      reactTime = Date.now();
+      console.log("reactTime:", reactTime);
     }
-}, 8000);
-}
-</script>
+
+    function startTime() {
+      for (let i = 0; i < 9; i++) {
+        setTimeout(function(i) {
+          return function() {
+            document.getElementById("counter").innerHTML = i;
+          };
+        }(i), (8 - i) * 1000);
+      }
+
+      setTimeout(function() {
+        if (reactTime === undefined) {
+          document.getElementById("target").innerHTML = "Too Slow";
+        } else {
+          let endTime = Date.now();
+          let elapsed = endTime - reactTime;
+          document.getElementById("target").innerHTML = "Time was " + elapsed + "ms";
+        }
+      }, 8000);
+    }
+  </script>
 </body>
 </html>
