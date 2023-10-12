@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color:  #d4d4d4;
+            background-color:  #b0d5ed;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #122325;
-            color: #fff;
+            background-color: #ffffff;
+            color: #000000;
             text-align: center;
             padding: 10px;
         }
@@ -96,96 +96,163 @@
         <p class="info">Click on the locations to search for treasure, beware the traps</p>
         <p class="info" id="locations">Number of locations checked is zero.</p>
         <p class="info" id="penalty">Penalty is zero.</p>
-        <p class="help">Click for help.</p>
+        <p class="help" onclick="help()">Click for help</p>
         <p class="help" id="help">Help report</p>
 
-        <div class="image-container">
-            <div class="row">
+
+    <div class="image-container">
               <div>
-                <img src="startImage.jpg" alt="startImage" width="50" height="50"/>
+                <img src="startImage.jpg" alt="startImage" id="id0" onclick="check(0)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id1" onclick="check(1)"/>
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id2" onclick="check(2)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id3" onclick="check(3)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id4" onclick="check(4)" />
               </div>
             </div>
-            <div class="row">
+            <div class="image-container">
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id5" onclick="check(5)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id6" onclick="check(6)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id7" onclick="check(7)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id8" onclick="check(8)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id9" onclick="check(9)" />
               </div>
             </div>
-            <div class="row">
+            <div class="image-container">
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id10" onclick="check(10)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id11" onclick="check(11)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
-              </div>
-              <div class="two wide column">
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id12" onclick="check(12)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id13" onclick="check(13)" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" id="id14" onclick="check(14)" />
               </div>
             </div>
-            <div class="row">
+            <div class="image-container">
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id15" onclick="check(15)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id16" onclick="check(16)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id17" onclick="check(17)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id18" onclick="check(18)" />
               </div>
               <div>
-                <img src="startImage.jpg" alt="startImage" />
-              </div>
-            </div>
-            <div class="row">
-              <div>
-                <img src="startImage.jpg" alt="startImage" />
-              </div>
-              <div>
-                <img src="startImage.jpg" alt="startImage" />
-              </div>
-              <div>
-                <img src="startImage.jpg" alt="startImage" />
-              </div>
-              <div>
-                <img src="startImage.jpg" alt="startImage" />
-              </div>
-              <div>
-                <img src="startImage.jpg" alt="startImage" />
+                <img src="startImage.jpg" alt="startImage" id="id19" onclick="check(19)" />
               </div>
             </div>
-          </div>
+            <div class="image-container">
+              <div>
+                <img src="startImage.jpg" alt="startImage" id="id20" onclick="check(20)" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" id="id21" onclick="check(21)" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" id="id22" onclick="check(22)" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" id="id23" onclick="check(23)" />
+              </div>
+              <div>
+                <img src="startImage.jpg" alt="startImage" id="id24" onclick="check(24)" />
+              </div>
+            </div>
+    </div>
     
+    <script>
+            // Variable declarations
+            var ids = ["id0", "id1", "id2","id3","id4","id5","id6","id7","id8", "id9", "id10","id11","id12", "id13", "id14","id15","id16", "id17", "id18","id19","id20", "id21", "id22","id23","id24"];
+            var checkCount = 0;
+            var penalty = 0;
+            var lastCheck = 0;
+            var treasureLocation = 5;  // Change this to the desired treasure location (0-24)
+            var trapLocation = 18;  // Change this to the desired trap location (0-24)
+            var gameOver = false;
+    
+            // Function to handle image clicks
+            function check(position) {
+                if (gameOver) return;
+                
+                // Get the image element by id
+                var image = document.getElementById(ids[position]);
+    
+                // Determine what the image should show
+                if (position === treasureLocation) {
+                    image.src = "treasure.jpg";  // Change to the path of your treasure image
+                    gameOver = true;
+                    penalty -= 3;
+                } else if (position === trapLocation) {
+                    image.src = "trap.jpg";  // Change to the path of your trap image
+                    gameOver = true;
+                    penalty += 4;
+                } else {
+                    image.src = "pirate.jpg";  // Change to the path of your pirate image
+                    penalty++;
+                }
+    
+                checkCount++;
+    
+                // Update the UI elements
+                document.getElementById("locations").textContent = "Number of locations checked is " + checkCount;
+                document.getElementById("penalty").textContent = "Penalty is " + penalty;
+                lastCheck = position;
+            }
+    
+            // Function to provide help
+        function help() {
+                if (gameOver) return;
+                
+                var helpElement = document.getElementById("help");
+                var result = "Step Faster";  // Default result
+                
+                // Calculate row and column for the treasure and last checked location
+                var treasureRow = Math.floor(treasureLocation / 5);
+                var treasureCol = treasureLocation % 5;
+                var lastRow = Math.floor(lastCheck / 5);
+                var lastCol = lastCheck % 5;
+    
+                // Check if the last checked and treasure locations are next to each other
+                if (Math.abs(lastRow - treasureRow) + Math.abs(lastCol - treasureCol) <= 1) {
+                    result = "Can smell it";
+                } else if (Math.abs(lastRow - treasureRow) + Math.abs(lastCol - treasureCol) <= 2) {
+                    result = "Close Matie";
+                    penalty += 2;
+                } else {
+                    penalty += 2;
+                }
+    
+                // Update the UI elements
+                document.getElementById("penalty").textContent = "Penalty is " + penalty;
+                helpElement.textContent = result;
+            }
+    </script>
 </body>
 </html>
