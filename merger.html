@@ -70,6 +70,7 @@
   <button onclick="addAtEnd()">Add end</button>
   <button onclick="addAtFront()">Add front</button>
   <button onclick="remove()">Remove</button>
+  <button onclick="swap()">Swap</button>
 </body>
 
 <script>
@@ -132,7 +133,23 @@
 
     // Clear the input field
     document.getElementById('newItem').value = "";
+
   }
+    function swap()
+     {
+			let mergerItems = document.getElementsByClassName("merger")
+			let A= Math.floor(Math.random() * mergerItems.length)
+			let B = Math.floor(Math.random() * mergerItems.length)
+			 let starting = document.getElementsByClassName("merger")[A]
+			 let ending = document.getElementsByClassName("merger")[B]
+			if (mergerItems.length > 1) {
+				let swap = starting.innerHTML
+				starting.innerHTML = ending.innerHTML
+			 	ending.innerHTML = swap
+			}
+		
+		}
+    
 </script>
 
 </html>

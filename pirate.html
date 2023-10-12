@@ -82,10 +82,19 @@
 
         .image-container img {
             width: 40%;
-            height: auto;
-            
+            height: auto;           
             
         }
+        .new-button {
+        border: 2px solid #b0d5ed;
+        background-color: #f8f9f9;
+        color: #66b4e7;
+        padding: 10px 20px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+    }
     </style>
 </head>
 <body>
@@ -98,7 +107,7 @@
         <p class="info" id="penalty">Penalty is zero.</p>
         <p class="help" onclick="help()">Click for help</p>
         <p class="help" id="help">Help report</p>
-
+        <button type="button" class="new-button" onclick="b()">Random </button>
 
     <div class="image-container">
               <div>
@@ -186,7 +195,7 @@
               </div>
             </div>
     </div>
-    <button type="button" class="btn btn-danger" onclick="b()">Random </button>
+    
     <script>
             // Variable declarations
             var ids = ["id0", "id1", "id2","id3","id4","id5","id6","id7","id8", "id9", "id10","id11","id12", "id13", "id14","id15","id16", "id17", "id18","id19","id20", "id21", "id22","id23","id24"];
@@ -253,22 +262,28 @@
                 document.getElementById("penalty").textContent = "Penalty is " + penalty;
                 helpElement.textContent = result;
             }
-            function b(){
-              checkCount=0;
-              penalty=0;
-              do{
-                treasureLocation=Math.floor(Math.random()*25);
-              }while(trapLocation==treasureLocation);
-              do{
-                treasureLocation=Math.floor(Math.random()*25);
-              }while(treasureLocation==trapLocation);
-              document.getElementById("locations").textContent = "Number of locations checked is " + checkCount;
-                document.getElementById("penalty").textContent = "Penalty is " + penalty;
-                for(var n=0;n<ids.lenth;n++){
-           var imageElement=document.getElementById(ids[n]);
-              imageElement.src = "startimage.jpg";
-                }
+            function b() {
+            checkCount = 0;
+            penalty = 0;
+          gameOver = false;
+          do {
+                treasureLocation = Math.floor(Math.random() * 25);
+            } while (treasureLocation === trapLocation);
+            do {
+                trapLocation = Math.floor(Math.random() * 25);
+            } while (trapLocation === treasureLocation);
+            document.getElementById('penalty').textContent = "Penalty is 0";
+            document.getElementById('locations').textContent = "Number of locations checked is 0";
+           
+            for (var i = 0; i < 25; i++) {
+                var img = document.getElementById(i.toString());
+                img.src = "startimage.jpg";
+                img.style.backgroundColor = "";
             }
+           
+        }
+
+
     </script>
 </body>
 </html>
